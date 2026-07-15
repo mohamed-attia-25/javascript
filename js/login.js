@@ -25,12 +25,14 @@ let eyeClose2 = document.querySelector("#eyeClose2")
 let eye = false
 let input = document.querySelectorAll('[type="password"]')
 
-
+// placeholder="Enter Your Username"
 
 function eyemode() {
     if (eye == false) {
-        input[1].setAttribute("type","password")
         input[0].setAttribute("type","password")
+        input[1].setAttribute("type","password")
+        input[1].setAttribute("placeholder","...............")
+        input[0].setAttribute("placeholder","...............")
         eyeOpen1.classList.remove("none")
         eyeOpen2.classList.remove("none")
         eyeClose1.classList.add("none")
@@ -38,6 +40,8 @@ function eyemode() {
     } else {
         input[0].setAttribute("type","text")
         input[1].setAttribute("type","text")
+        input[0].setAttribute("placeholder","password")
+        input[1].setAttribute("placeholder","password")
         eyeOpen2.classList.add("none")
         eyeOpen1.classList.add("none")
         eyeClose1.classList.remove("none")
@@ -168,15 +172,24 @@ signup.addEventListener("click",function(eve){
             SupPass.setAttribute("style","padding: 5px 10px;")
         } 
     }else if ((upUser.value.length > 20) || (upPass.value.length > 25)) {
+        SupEmail.innerHTML = ""
+        SupEmail.setAttribute("style","padding: 0px 0px;")
+
         if (upUser.value.length > 20) {
             SupUser.innerHTML = "number of characters Username exceeded 20"
             SupUser.setAttribute("style","padding: 5px 10px;")
-        } 
+        } else {
+            SupUser.innerHTML = ""
+            SupUser.setAttribute("style","padding: 0px 0px;")
+        }
 
         if (upPass.value.length > 25) {
             SupPass.innerHTML = "number of characters Password exceeded 25"
             SupPass.setAttribute("style","padding: 5px 10px;")
-        } 
+        } else {
+            SupPass.innerHTML = ""
+            SupPass.setAttribute("style","padding: 0px 0px;")
+        }
     } else {
         localStorage.setItem("user",upUser.value)
         localStorage.setItem("email",upEmail.value)
