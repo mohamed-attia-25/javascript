@@ -8,20 +8,8 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <!-- <i class="fa-solid fa-angles-right"></i> -->
-    <!-- <i class="fa-solid fa-angles-left"></i> -->
-            <!-- <button class="mood" id="mood" type="button">
-                    <i class="fa-solid fa-sun" id="sun"></i>
-                    <i class="fa-solid fa-moon" id="moon"></i>
-                <span class="navBtn" id="navBtn"></span>
-            </button> -->
-            <!-- <i class="fa-solid fa-eye"></i> -->
-            <!-- <i class="fa-solid fa-eye-slash"></i> -->
 
-            <!-- <i class="fa-solid fa-circle-user"></i> -->
-            <!-- <i class="fa-solid fa-lock"></i> -->
-            <!-- <i class="fa-solid fa-at"></i> -->
-    
+    <!-- * start sectionLogin -->
     <section class="sectionlogin">
         <div class="loginForm">
             <div class="headerLogin">
@@ -42,6 +30,14 @@
                         <label for="inPass">password</label>
                         <input id="inPass" type="password" placeholder=".........." >
                         <i class="fa-solid fa-lock I"></i>
+                        <button type="button" class="eay" id="eay1">
+                            <div id="eyeOpen1" >
+                                <i class="fa-solid fa-eye" ></i> 
+                            </div>
+                            <div id="eyeClose1" >
+                                <i class="fa-solid fa-eye-slash" ></i>
+                            </div>
+                        </button>
                     </div>
                 </div>
 
@@ -64,8 +60,9 @@
             </div>
         </div>
     </section>
+    <!-- * end sectionLogin -->
 
-    <!-- * -->
+    <!-- * start sectionSingup -->
         <section class="sectionsignup">
         <div class="signupForm">
             <div class="headerSignup">
@@ -92,6 +89,14 @@
                         <label for="inPass">password</label>
                         <input id="inPass" type="password" placeholder=".........." >
                         <i class="fa-solid fa-lock I"></i>
+                        <button type="button" class="eay" id="eay2">
+                            <div id="eyeOpen2" >
+                                <i class="fa-solid fa-eye" ></i> 
+                            </div>
+                            <div id="eyeClose2" >
+                                <i class="fa-solid fa-eye-slash" ></i>
+                            </div>
+                        </button>
                     </div>
                 </div>
 
@@ -103,7 +108,45 @@
             </div>
         </div>
     </section>
+    <!-- * end sectionSingup -->
     
+    <!-- * start overlay -->
+    <div id="overlay">
+        <div class="cont">
+            <div id="contLogin" >
+                <div class="layLogo">
+                    <img src="img/myshop_logo.svg" alt="">
+                </div>
+
+                <div class="layHead">
+                    <h2>Welcome Back!</h2>
+                </div>
+
+                <div class="layP">
+                    <p>Already shopping with us? Sign in to pick up right where you left off.</p>
+                </div>
+
+                <button class="repBtn" type="button" id="layLoginBtn">Sign up</button>
+            </div>
+
+            <div id="contSignup" class="none">
+                <div class="layLogo">
+                    <img src="img/myshop_logo.svg" alt="">
+                </div>
+
+                <div class="layHead">
+                    <h2>Hello, Friend!</h2>
+                </div>
+
+                <div class="layP">
+                    <p>Don't have an account yet? Sign up and start exploring everything myshop has for you.</p>
+                </div>
+
+                <button class="repBtn" type="button" id="laysignBtn">Sign in</button>
+        </div>
+    </div>
+
+
     <!-- * hava script filse -->
     <script src="js/all.min.js"></script>
     <script src="js/main.js"></script>

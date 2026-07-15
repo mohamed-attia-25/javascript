@@ -294,6 +294,16 @@ body {
     left: 0px;
 }
 
+.eay {
+    background-color: transparent;
+    position: absolute;
+    top: 42px;
+    right: 15px;
+    font-size: 1.3rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
 #login,
 #signup {
     display: block;
@@ -347,4 +357,103 @@ body {
     cursor: pointer;
     color: #3577F0 !important;
 }
+
+.none {
+    display: none !important;
+}
+
 /* * end style sectionlogin && sectionsugnup */
+
+
+
+/* * start style overlay */
+#overlay {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    background-image: url(../img/backlogin.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.layLogo {
+    width: 300px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 1);
+    position: relative;
+    border: #012696 4px solid;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    margin: auto;
+    margin-top: -50px;
+}
+
+.layLogo img {
+    width: 400px;
+    position: absolute;
+}
+
+.layHead {
+    text-align: center;
+    margin-top: 80px;
+    color: white !important;
+}
+
+.layHead h2 {
+    color: white !important;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.layP {
+    margin-top: 20px;
+    text-align: center;
+    width: 400px;
+}
+
+.layP p {
+    color: white !important;
+    font-size: 1.2rem;
+
+}
+
+.repBtn {
+    display: block;
+    background-color: transparent;
+    color: #ffffff !important;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 30px;
+    font-size: 2rem;
+    font-weight: 900;
+    border: #ffffff 4px solid;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    cursor: pointer;
+}
+
+.repBtn:hover {
+    background-color:white;
+    color:#012696 !important;
+    transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    box-shadow: 0 0 10px 10px #0000002d;
+}
+/* * end style overlay */
