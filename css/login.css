@@ -220,10 +220,28 @@ body {
     gap: 8px; 
     width: 90%;
     position: relative;
-
 }
 
-/* #EAF1FE */
+
+.user span,
+.email span,
+.pass span {
+    position: absolute;
+    background-color: rgb(255, 200, 200);
+    right: 10px;
+    width: 70%;
+    z-index: -1;
+    font-size: 0.8rem;
+    top: -10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: rgb(255, 0, 0) !important;
+    box-shadow: 0 0 10px 0px rgba(255, 0, 0, 0.479);
+}
+
 .user label,
 .email label,
 .pass label {
@@ -456,4 +474,106 @@ body {
     -o-transform: scale(1.1,1.1);
     box-shadow: 0 0 10px 10px #0000002d;
 }
+
+.res {
+    display: none;
+}
+
+
+
+@media (max-width: 1150px) {
+    .loginForm,
+    .signupForm {
+        width: 400px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 850px) {
+    #overlay {
+        display: none !important;
+    }
+
+    .sectionlogin,
+    .sectionsignup{
+        left:0;
+        width: 100%;
+        height: auto;
+    }
+
+    .loginForm,
+    .signupForm {
+        width: 500px;
+        position: absolute;
+        top: 100px;
+}
+
+    .res {
+        display: block;
+        width: 500px;
+        height: 80px;
+        margin: auto;
+        margin-top: 30px;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(20px);
+        border: #3B6CF6 2px solid;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+}
+
+    #resin,
+    #resup {
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(20px);
+        border: #3B6CF6 2px solid;
+        padding: 10px 50px;
+        border-radius: 23px;
+        -webkit-border-radius: 23px;
+        -moz-border-radius: 23px;
+        -ms-border-radius: 23px;
+        -o-border-radius: 23px;
+        font-size: 1.2rem;
+        font-weight: 900;
+        cursor: pointer;
+    }
+    
+    
+    #resin:hover,
+    #resup:hover {
+        background-color:#3B6CF6 !important;
+        color: white !important;
+    }
+    
+    .back {
+        background-color: #3B6CF6 !important;
+        color: white !important;
+    }
+}
+
+@media (max-width: 530px) {
+    .res {
+        width: 95%;
+    }
+
+    
+    #resin,
+    #resup {
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+
+    .loginForm,
+    .signupForm {
+        width: 95%;
+    }
+    
+}
+
 /* * end style overlay */

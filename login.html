@@ -10,7 +10,11 @@
 <body>
 
     <!-- * start sectionLogin -->
-    <section class="sectionlogin">
+    <div class="res">
+        <button class="back" type="button" id="resin">sing in</button>
+        <button class="" type="button" id="resup">sign up</button>
+    </div>
+    <section class="sectionlogin" id="sectionlogin">
         <div class="loginForm">
             <div class="headerLogin">
                 <span>welcome back</span>
@@ -24,6 +28,7 @@
                         <label for="inUser">username</label>
                         <input id="inUser" type="text" placeholder="Enter Your Username">
                         <i class="fa-solid fa-circle-user I"></i>
+                        <span id="SinUser"></span>
                     </div>
 
                     <div class="pass">
@@ -38,6 +43,7 @@
                                 <i class="fa-solid fa-eye-slash" ></i>
                             </div>
                         </button>
+                        <span id="SinPass"></span>
                     </div>
                 </div>
 
@@ -63,7 +69,7 @@
     <!-- * end sectionLogin -->
 
     <!-- * start sectionSingup -->
-        <section class="sectionsignup">
+        <section class="sectionsignup none" id="sectionsignup">
         <div class="signupForm">
             <div class="headerSignup">
                 <span>Welcome!</span>
@@ -74,20 +80,22 @@
             <form>
                 <div class="inputSignup">
                     <div class="user">
-                        <label for="uoUser">username</label>
-                        <input id="uoUser" type="text" placeholder="Enter Your Username">
+                        <label for="upUser">username</label>
+                        <input id="upUser" type="text" placeholder="Enter Your Username">
                         <i class="fa-solid fa-circle-user I"></i>
+                        <span id="SupUser"></span>
                     </div>
 
                     <div class="email">
                         <label for="upEmail">email</label>
                         <input id="upEmail" type="email" placeholder="example@epitome.com">
                         <i class="fa-solid fa-at I"></i>
+                        <span id="SupEmail"></span>
                     </div>
 
                     <div class="pass">
-                        <label for="inPass">password</label>
-                        <input id="inPass" type="password" placeholder=".........." >
+                        <label for="upPass">password</label>
+                        <input id="upPass" type="password" placeholder=".........." >
                         <i class="fa-solid fa-lock I"></i>
                         <button type="button" class="eay" id="eay2">
                             <div id="eyeOpen2" >
@@ -97,6 +105,7 @@
                                 <i class="fa-solid fa-eye-slash" ></i>
                             </div>
                         </button>
+                        <span id="SupPass"></span>
                     </div>
                 </div>
 

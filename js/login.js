@@ -61,8 +61,6 @@ eay2.addEventListener("click", function(){
 
 // end password eye
 
-
-
 let overlay = document.querySelector("#overlay")
 let layLoginBtn = document.querySelector("#layLoginBtn")
 let laysignBtn = document.querySelector("#laysignBtn")
@@ -75,6 +73,8 @@ layLoginBtn.addEventListener("click", function(){
     overlay.setAttribute("style","left: 50%;")
     contLogin.classList.add("none")
     contSignup.classList.remove("none")
+    sectionlogin.classList.add("none")
+    sectionsignup.classList.remove("none")
 })
 
 creatBtn.addEventListener("click", function(){
@@ -87,6 +87,8 @@ laysignBtn.addEventListener("click", function(){
     overlay.setAttribute("style","left: 0;")
     contLogin.classList.remove("none")
     contSignup.classList.add("none")
+    sectionlogin.classList.remove("none")
+    sectionsignup.classList.add("none")
 })
 
 arrdBtn.addEventListener("click", function(){
@@ -94,3 +96,108 @@ arrdBtn.addEventListener("click", function(){
     contLogin.classList.remove("none")
     contSignup.classList.add("none")
 })
+
+// end function pc
+
+let resin = document.querySelector("#resin")
+let resup = document.querySelector("#resup")
+let sectionlogin = document.querySelector("#sectionlogin")
+let sectionsignup = document.querySelector("#sectionsignup")
+
+resup.addEventListener("click",function(){
+    sectionlogin.classList.add("none")
+    sectionsignup.classList.remove("none")
+    resup.classList.add("back")
+    resin.classList.remove("back")
+})
+creatBtn.addEventListener("click",function(){
+    sectionlogin.classList.add("none")
+    sectionsignup.classList.remove("none")
+    resup.classList.add("back")
+    resin.classList.remove("back")
+})
+
+resin.addEventListener("click",function(){
+    sectionlogin.classList.remove("none")
+    sectionsignup.classList.add("none")
+    resup.classList.remove("back")
+    resin.classList.add("back")
+})
+arrdBtn.addEventListener("click",function(){
+    sectionlogin.classList.remove("none")
+    sectionsignup.classList.add("none")
+    resup.classList.remove("back")
+    resin.classList.add("back")
+})
+// end function mobile
+
+
+let login = document.querySelector("#login")
+let signup = document.querySelector("#signup")
+
+let inUser =document.querySelector("#inUser")
+let inPass = document.querySelector("#inPass")
+
+let SinUser =document.querySelector("#SinUser")
+let SinPass = document.querySelector("#SinPass")
+
+let upUser = document.querySelector("#upUser")
+let upEmail = document.querySelector("#upEmail")
+let upPass = document.querySelector("#upPass")
+
+let SupUser = document.querySelector("#SupUser")
+let SupEmail = document.querySelector("#SupEmail")
+let SupPass = document.querySelector("#SupPass")
+
+
+signup.addEventListener("click",function(eve){
+    eve.preventDefault()
+    if((upUser.value == "") || (upEmail.value == "") || (upPass.value == "")) {
+        if (upUser.value == "") {
+            SupUser.innerHTML = "Nothing Username"
+            SupUser.setAttribute("style","padding: 5px 10px;")
+        } 
+
+        if (upEmail.value == "") {
+            SupEmail.innerHTML = "Nothing Email"
+            SupEmail.setAttribute("style","padding: 5px 10px;")
+        } 
+
+        if (upPass.value == "") {
+            SupPass.innerHTML = "Nothing Password"
+            SupPass.setAttribute("style","padding: 5px 10px;")
+        } 
+    }else if ((upUser.value.length > 20) || (upPass.value.length > 25)) {
+        if (upUser.value.length > 20) {
+            SupUser.innerHTML = "number of characters Username exceeded 20"
+            SupUser.setAttribute("style","padding: 5px 10px;")
+        } 
+
+        if (upPass.value.length > 25) {
+            SupPass.innerHTML = "number of characters Password exceeded 25"
+            SupPass.setAttribute("style","padding: 5px 10px;")
+        } 
+    } else {
+        localStorage.setItem("user",upUser.value)
+        localStorage.setItem("email",upEmail.value)
+        localStorage.setItem("pass",upPass.value)
+        SupUser.innerHTML = ""
+        SupEmail.innerHTML = ""
+        SupPass.innerHTML = ""
+        SupUser.setAttribute("style","padding: 0px 0px;")
+        SupEmail.setAttribute("style","padding: 0px 0px;")
+        SupPass.setAttribute("style","padding: 0px 0px;")
+        
+        setTimeout(function(){
+            overlay.setAttribute("style","left: 0;")
+            contLogin.classList.remove("none")
+            contSignup.classList.add("none")
+            sectionlogin.classList.remove("none")
+            sectionsignup.classList.add("none")
+            resup.classList.remove("back")
+            resin.classList.add("back")
+        },350)
+    }
+})
+
+// end sign up js
