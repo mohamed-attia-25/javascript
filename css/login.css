@@ -322,7 +322,7 @@ body {
 #login:hover,
 #signup:hover {
     background: linear-gradient(45deg, #ffffff67, #83b1ff3a);
-    */border: #3B6CF6 2px solid;
+    border: #3B6CF6 2px solid;
     color: #3B6CF6 !important;
     transform: scale(1.1,1.1);
     -webkit-transform: scale(1.1,1.1);
