@@ -5,14 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
+    <!-- <i class="fa-solid fa-angles-right"></i> -->
+    <!-- <i class="fa-solid fa-angles-left"></i> -->
+            <!-- <button class="mood" id="mood" type="button">
+                    <i class="fa-solid fa-sun" id="sun"></i>
+                    <i class="fa-solid fa-moon" id="moon"></i>
+                <span class="navBtn" id="navBtn"></span>
+            </button> -->
+            <!-- <i class="fa-solid fa-eye"></i> -->
+            <!-- <i class="fa-solid fa-eye-slash"></i> -->
+
+            <!-- <i class="fa-solid fa-circle-user"></i> -->
+            <!-- <i class="fa-solid fa-lock"></i> -->
+            <!-- <i class="fa-solid fa-at"></i> -->
     
+    <section class="sectionlogin">
+        <div class="loginForm">
+            <div class="headerLogin">
+                <span>welcome back</span>
+                <h3 id="headLogin">sign in</h3>
+                <p>enter your details to continue to your account</p>
+            </div>
 
+            <form>
+                <div class="inputLogin">
+                    <div class="user">
+                        <label for="inUser">username</label>
+                        <input id="inUser" type="text" placeholder="Enter Your Username">
+                        <i class="fa-solid fa-circle-user I"></i>
+                    </div>
 
+                    <div class="pass">
+                        <label for="inPass">password</label>
+                        <input id="inPass" type="password" placeholder=".........." >
+                        <i class="fa-solid fa-lock I"></i>
+                    </div>
+                </div>
+
+                <div class="dash">
+                    <div class="mebox">
+                        <input id="checkme" type="checkbox">
+                        <label for="checkme">Remeber me</label>
+                    </div>
+
+                    <div class="forgot">
+                        <a href="">Forgot Password</a>
+                    </div>
+                </div>
+
+                <button type="submit" id="login">sign in</button>
+            </form>
+
+            <div class="creat">
+                <p>Don't have an account? <button type="button" id="creatBtn">Sign up</button></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- * -->
+        <section class="sectionsignup">
+        <div class="signupForm">
+            <div class="headerSignup">
+                <span>Welcome!</span>
+                <h3 id="headSign">sign up</h3>
+                <p>Create an account and become a user for MYSHOP</p>
+            </div>
+
+            <form>
+                <div class="inputSignup">
+                    <div class="user">
+                        <label for="uoUser">username</label>
+                        <input id="uoUser" type="text" placeholder="Enter Your Username">
+                        <i class="fa-solid fa-circle-user I"></i>
+                    </div>
+
+                    <div class="email">
+                        <label for="upEmail">email</label>
+                        <input id="upEmail" type="email" placeholder="example@epitome.com">
+                        <i class="fa-solid fa-at I"></i>
+                    </div>
+
+                    <div class="pass">
+                        <label for="inPass">password</label>
+                        <input id="inPass" type="password" placeholder=".........." >
+                        <i class="fa-solid fa-lock I"></i>
+                    </div>
+                </div>
+
+                <button type="submit" id="signup">sign up</button>
+            </form>
+
+            <div class="arrd">
+                <p>Already have an account? <button type="button" id="arrdBtn">Sign in</button></p>
+            </div>
+        </div>
+    </section>
+    
     <!-- * hava script filse -->
     <script src="js/all.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/mood.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

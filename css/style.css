@@ -17,11 +17,7 @@
     -o-transition: all 0.4s ease;
 }
 
-:root {
-    --main-color: #ffffff;
-    --main-dark-color: #0B1228;
-    --second-color: #3B6CF6;
-}
+
 
 body {
     height: 500vh;
@@ -113,7 +109,7 @@ nav .nav .activ {
     color: white !important;
 }
 
-nav .nav .mood {
+.mood {
     background-color: #0c1e50;
     padding: 8px 5px;
     width: 80px;
@@ -131,7 +127,7 @@ nav .nav .mood {
     position: relative;
 }
 
-nav .nav .mood:hover {
+.mood:hover {
     transform: scale(1.1,1.1);
     -webkit-transform: scale(1.1,1.1);
     -moz-transform: scale(1.1,1.1);
@@ -139,14 +135,14 @@ nav .nav .mood:hover {
     -o-transform: scale(1.1,1.1);
 }
 
-nav .nav .mood :nth-child(1) {
+.mood :nth-child(1) {
     z-index: 900;
 }
-nav .nav .mood :nth-child(2) {
+.mood :nth-child(2) {
     z-index: 900;
 }
 
-nav .nav .mood .navBtn {
+.mood .navBtn {
     position: absolute;
     background-color: rgb(255, 255, 255);
     width: 28px;

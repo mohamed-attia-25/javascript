@@ -1,64 +1,24 @@
-// let body = document.body
-
-// let allElement = document.querySelectorAll("*")
-
-// localStorage.setItem("mood","light")
-
-// let orMood = false 
-
-// let mood = document.getElementById("mood")
-
-// let navBtn = document.getElementById("navBtn") 
-// navBtn.style.cssText = `left: 2.5px;`
-
-
-// function trueFalse() {
-//     if (orMood == false) {
-//         orMood = true
-//         localStorage.mood = "dark"
-//     } else {
-//         orMood = false
-//         localStorage.mood = "light"
-//     }
-// }
-
-// mood.addEventListener("click",function(){
-//     if (localStorage.mood == "light") {
-//         for(let i = 0; i < allElement.length; i++) {
-//             allElement[i].style.cssText = `color: #ffffff;`
-//         }
-//         body.style.cssText = `background-color: #0B1228`
-//         mood.style.cssText = `background-color:darkorange;`
-//         navBtn.style.cssText = `left: 45px;`
-//     } else if (localStorage.mood == "dark") {
-//         for(let i = 0; i < allElement.length; i++) {
-//             allElement[i].style.cssText = `color: #000000;`
-//         }
-//         body.style.cssText = `background-color: #ffffff`
-//         navBtn.style.cssText = `left: 2.5px;`
-//     }
-//     trueFalse()
-// })
-
-
-
-
+// الحجات الي هنستدعيها ونحطها في متغير هيا البدي عشن الباك جروند كلر و كل العناصر عشان نطبق عليها للون التيكست جوا لوب عشان يطبق علي كلو
+// و زرار المود عشان نعمل عليه الحدث كليك والناف بتن الدايره الي بتتحرك جوا
 let body = document.body;
 let allElement = document.querySelectorAll("*");
 let mood = document.getElementById("mood");
 let navBtn = document.getElementById("navBtn");
 
 
+// لو مفيس حاجه في اللوكل ستوردج اسمها مود اعملي واحده وحط فيها القيمه ليت نفذ فور تشغيل الصفحه
 if (!localStorage.getItem("mood")) {
     localStorage.setItem("mood", "light");
 }
 
+// اتاكد جوا الفانكشن لو الوكال استوردج الي اسمها مود دارك هتنفذ الدارك مود ولو مش دارك يعني ليت هتنفز الليت مود 
+// عملناها فانكشن عشان نستدعيها تاني تحت
 function mode() {
     if (localStorage.mood == "dark") {
         for (let i = 0; i < allElement.length; i++) {
             allElement[i].style.setProperty("color", "#ffffff");
         }
-        body.style.cssText = `background-color: #0B1228`;
+        body.style.cssText = `background-color: #0B1228;`;
         mood.style.cssText = `background-color:darkorange;`;
         navBtn.style.cssText = `left: 45px;`;
     } else {
@@ -70,9 +30,14 @@ function mode() {
         navBtn.style.cssText = `left: 2.5px;`;
     }
 }
+
+// نفذو علي طول الفانكشن اول لما الصفحه تفتح
 mode();
 
-mood.addEventListener("click", function () {
+
+// اعملي ايفينت كليك علي الزرار لما ادوس علي والمود الي في اللوكال استوردج ليت تخليه دارك والعكس
+// بعد كدا استدعي الداله الي فوق عشان تغير الوضع علي حسب الي لسا متخزن حالا بعد الكليك في اللوكال ستوردج
+mood.addEventListener("click",function(){
     if (localStorage.mood == "light") {
         localStorage.mood = "dark"
     } else {
@@ -80,3 +45,5 @@ mood.addEventListener("click", function () {
     }
     mode();
 });
+
+

@@ -1,0 +1,350 @@
+
+.mood {
+    background-color: #0c1e50;
+    padding: 8px 5px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: #3B6CF6 2px solid;
+    border-radius: 65px;
+    -webkit-border-radius: 65px;
+    -moz-border-radius: 65px;
+    -ms-border-radius: 65px;
+    -o-border-radius: 65px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.mood:hover {
+    transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+}
+
+.mood :nth-child(1) {
+    z-index: 900;
+}
+.mood :nth-child(2) {
+    z-index: 900;
+}
+
+.mood .navBtn {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    top: calc(50% - 14px);
+    z-index: 899;
+}
+
+
+/* * start style login */
+
+*,
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* *start style sectionlogin */
+.sectionlogin {
+    right: 0;
+    top: 0;
+}
+
+.loginForm {
+    height: 650px;
+}
+
+.dash {
+    display: flex;
+    margin:auto;
+    width: 85%;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.mebox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.mebox label {
+    color: #707b96 !important;
+}
+
+.forgot a{
+    color: #3577F0 !important;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+    color: #76a1f1 !important;
+}
+
+/* *end style sectionlogin */
+
+
+
+
+
+/* * start style sectionsugnup  */
+.sectionsignup {
+    top: 0;
+    left: 0;
+}
+
+.signupForm {
+    height: 700px;
+}
+
+/* * end style sectionsugnup  */
+
+
+
+
+
+
+
+/* * start style sectionlogin && sectionsugnup */
+.sectionlogin,
+.sectionsignup {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginForm,
+.signupForm {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border: #3B6CF6 2px solid;
+    width: 550px;
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 35px;
+}
+
+
+.headerLogin,
+.headerSignup {
+    margin-top: 50px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.headerLogin span,
+.headerSignup span {
+    font-size: 1.2rem;
+    color: #F5A54D !important;
+}
+
+#headLogin,
+#headSign {
+    font-size: 2.4rem;
+    font-weight: 900;
+}
+
+.headerLogin p,
+.headerSignup p {
+    color: #707b96 !important;
+}
+
+
+.colorDark {
+    color: #3B6CF6 !important;
+}
+
+.colorLight {
+    color: #0c1e50 !important;
+}
+
+.inputLogin,
+.inputSignup {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.user,
+.email,
+.pass {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+    width: 90%;
+    position: relative;
+
+}
+
+/* #EAF1FE */
+.user label,
+.email label,
+.pass label {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-left: 15px;
+}
+
+.user input,
+.email input,
+.pass input {
+    background-color: #c9d4e750;
+    backdrop-filter: blur(20px);
+    border: #3B6CF6 2px solid;
+    width: 100%;
+    padding: 10px 20px 10px 35px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.user input::placeholder,
+.email input::placeholder ,
+.pass input::placeholder {
+    color: #404a61 !important;;
+}
+
+.user input:focus,
+.email input:focus,
+.pass input:focus {
+    transform: scale(1.05,1.1);
+    -webkit-transform: scale(1.05,1.1);
+    -moz-transform: scale(1.05,1.1);
+    -ms-transform: scale(1.05,1.1);
+    -o-transform: scale(1.05,1.1);
+    box-shadow: 0 0 10px 10px #3b6df62d;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px 10px 40px;
+}
+
+.I {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    font-size: 1.2rem;
+    transform: translateY(30%);
+    -webkit-transform: translateY(30%);
+    -moz-transform: translateY(30%);
+    -ms-transform: translateY(30%);
+    -o-transform: translateY(30%);
+    opacity: 0.6;
+}
+
+
+.user:has(input:focus) .I {
+    left: 0px;
+}
+
+.email:has(input:focus) .I {
+    left: 0px;
+}
+
+.pass:has(input:focus) .I {
+    left: 0px;
+}
+
+#login,
+#signup {
+    display: block;
+    background: linear-gradient(45deg, #051d5e, #5f97f8);
+    width: 70%;
+    margin:auto;
+    margin-top: 40px;
+    padding: 15px 10px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white !important;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    cursor: pointer;
+    border: #3B6CF6 2px solid;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+
+#login:hover,
+#signup:hover {
+    background: linear-gradient(45deg, #ffffff67, #83b1ff3a);
+    */border: #3B6CF6 2px solid;
+    color: #3B6CF6 !important;
+    transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    box-shadow: 0 0 10px 10px #3b6df62d;
+} 
+
+.creat,
+.arrd {
+    width: 80%;
+    margin: auto;
+    margin-top: -8px;
+    text-align: center;
+}
+
+#creatBtn,
+#arrdBtn {
+    background-color: transparent;
+    font-size: 1.15rem;
+    cursor: pointer;
+    color: #3577F0 !important;
+}
+/* * end style sectionlogin && sectionsugnup */
