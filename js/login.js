@@ -175,23 +175,21 @@ signup.addEventListener("click",function(eve){
         } 
 
         
-        if ((upUser.value.length > 20) || (upPass.value.length > 25) || (upEmail.value !== "") || (upUser.value == "") || (upEmail.value == "") || (upPass.value == "")) {
+        if ((upUser.value.length > 20) || (upPass.value.length > 25) || (upEmail.value !== "") || (upUser.value == "") || (upEmail.value == "") || (upEmail.value !== "") || (upPass.value == "")) {
             for(let i = 0; i < em.length; i++){
                 if(upEmail.value.includes(em[i])){
                     vel = true
                     break
-                    console.log(em[i])
-                    console.log(vel)
                 }
             }
             if (upEmail.value !== "" && !upEmail.value.includes("@")) {
-                SupEmail.innerHTML = "no@"
+                SupEmail.innerHTML = "The @ symbol is missing"
                 SupEmail.setAttribute("style","padding: 4px 8px;")
             } else if (upEmail.value !== "" && !upEmail.value.includes(".")) {
-                SupEmail.innerHTML = "no."
+                SupEmail.innerHTML = "The point is missing"
                 SupEmail.setAttribute("style","padding: 4px 8px;")
             } else if (upEmail.value !== "" && !vel){
-                SupEmail.innerHTML = "noemail"
+                SupEmail.innerHTML = "The email address is incorrect"
                 SupEmail.setAttribute("style","padding: 4px 8px;")
             } else if(upEmail.value !== "" && vel) {
                 SupEmail.innerHTML = ""
