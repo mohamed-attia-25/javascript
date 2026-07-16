@@ -158,7 +158,13 @@ let vel = false
 
 signup.addEventListener("click",function(eve){
     eve.preventDefault()
-    if((upUser.value == "") || (upEmail.value == "") || (upPass.value == "") || (upUser.value.length > 20) || (upPass.value.length > 25)) {
+                for(let i = 0; i < em.length; i++){
+                if(upEmail.value.includes(em[i])){
+                    vel = true
+                    break
+                }
+            }
+    if((upUser.value == "") || (upEmail.value == "") || (upPass.value == "") || (upUser.value.length > 20) || (upPass.value.length > 25) || !vel) {
         if (upUser.value == "") {
             SupUser.innerHTML = "Nothing Username"
             SupUser.setAttribute("style","padding: 4px 8px;")
@@ -176,12 +182,6 @@ signup.addEventListener("click",function(eve){
 
         
         if ((upUser.value.length > 20) || (upPass.value.length > 25) || (upEmail.value !== "") || (upUser.value == "") || (upEmail.value == "") || (upEmail.value !== "") || (upPass.value == "")) {
-            for(let i = 0; i < em.length; i++){
-                if(upEmail.value.includes(em[i])){
-                    vel = true
-                    break
-                }
-            }
             if (upEmail.value !== "" && !upEmail.value.includes("@")) {
                 SupEmail.innerHTML = "The @ symbol is missing"
                 SupEmail.setAttribute("style","padding: 4px 8px;")
