@@ -490,6 +490,15 @@ body {
         width: 400px;
         padding: 0;
     }
+
+    .user span,
+    .email span,
+    .pass span {
+        right: 0px;
+        width: 65%;
+        font-size: 0.7rem;
+        top: -5px;
+    }
 }
 
 @media (max-width: 850px) {

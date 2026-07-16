@@ -153,6 +153,8 @@ let SupUser = document.querySelector("#SupUser")
 let SupEmail = document.querySelector("#SupEmail")
 let SupPass = document.querySelector("#SupPass")
 
+let em = ["com", "net", "org", "biz", "info", "eg", "gov", "edu", "dev"]
+let vel = false
 
 signup.addEventListener("click",function(eve){
     eve.preventDefault()
@@ -174,7 +176,24 @@ signup.addEventListener("click",function(eve){
 
         
         if ((upUser.value.length > 20) || (upPass.value.length > 25) || (upEmail.value !== "") || (upUser.value == "") || (upEmail.value == "") || (upPass.value == "")) {
-            if (upEmail.value !== "") {
+            for(let i = 0; i < em.length; i++){
+                if(upEmail.value.includes(em[i])){
+                    vel = true
+                    break
+                    console.log(em[i])
+                    console.log(vel)
+                }
+            }
+            if (upEmail.value !== "" && !upEmail.value.includes("@")) {
+                SupEmail.innerHTML = "no@"
+                SupEmail.setAttribute("style","padding: 4px 8px;")
+            } else if (upEmail.value !== "" && !upEmail.value.includes(".")) {
+                SupEmail.innerHTML = "no."
+                SupEmail.setAttribute("style","padding: 4px 8px;")
+            } else if (upEmail.value !== "" && !vel){
+                SupEmail.innerHTML = "noemail"
+                SupEmail.setAttribute("style","padding: 4px 8px;")
+            } else if(upEmail.value !== "" && vel) {
                 SupEmail.innerHTML = ""
                 SupEmail.setAttribute("style","padding: 0px 0px;")
             }
