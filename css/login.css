@@ -587,7 +587,16 @@ body {
     .signupForm {
         width: 95%;
     }
-    
+
+    .user span,
+    .email span,
+    .pass span {
+        right: -20px;
+        width: 60%;
+        font-size: 0.7rem;
+        top: -10px;
+        line-height: 1.2;
+    }
 }
 
 /* * end style overlay */

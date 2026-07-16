@@ -156,41 +156,52 @@ let SupPass = document.querySelector("#SupPass")
 
 signup.addEventListener("click",function(eve){
     eve.preventDefault()
-    if((upUser.value == "") || (upEmail.value == "") || (upPass.value == "")) {
+    if((upUser.value == "") || (upEmail.value == "") || (upPass.value == "") || (upUser.value.length > 20) || (upPass.value.length > 25)) {
         if (upUser.value == "") {
             SupUser.innerHTML = "Nothing Username"
-            SupUser.setAttribute("style","padding: 5px 10px;")
+            SupUser.setAttribute("style","padding: 4px 8px;")
         } 
 
         if (upEmail.value == "") {
             SupEmail.innerHTML = "Nothing Email"
-            SupEmail.setAttribute("style","padding: 5px 10px;")
+            SupEmail.setAttribute("style","padding: 4px 8px;")
         } 
 
         if (upPass.value == "") {
             SupPass.innerHTML = "Nothing Password"
-            SupPass.setAttribute("style","padding: 5px 10px;")
+            SupPass.setAttribute("style","padding: 4px 8px;")
         } 
-    }else if ((upUser.value.length > 20) || (upPass.value.length > 25)) {
-        SupEmail.innerHTML = ""
-        SupEmail.setAttribute("style","padding: 0px 0px;")
 
-        if (upUser.value.length > 20) {
-            SupUser.innerHTML = "number of characters Username exceeded 20"
-            SupUser.setAttribute("style","padding: 5px 10px;")
-        } else {
-            SupUser.innerHTML = ""
-            SupUser.setAttribute("style","padding: 0px 0px;")
+        
+        if ((upUser.value.length > 20) || (upPass.value.length > 25) || (upEmail.value !== "") || (upUser.value == "") || (upEmail.value == "") || (upPass.value == "")) {
+            if (upEmail.value !== "") {
+                SupEmail.innerHTML = ""
+                SupEmail.setAttribute("style","padding: 0px 0px;")
+            }
+    
+            if (upUser.value.length > 20 && upUser.value != "") {
+                SupUser.innerHTML = "number of characters Username exceeded 20"
+                SupUser.setAttribute("style","padding: 4px 8px;")
+            } else if (upUser.value == "") {
+            SupUser.innerHTML = "Nothing Username"
+            SupUser.setAttribute("style","padding: 4px 8px;")
+            } else {
+                SupUser.innerHTML = ""
+                SupUser.setAttribute("style","padding: 0px 0px;")
+            }
+    
+            if (upPass.value.length > 25 && upPass.value != "") {
+                SupPass.innerHTML = "number of characters Password exceeded 25"
+                SupPass.setAttribute("style","padding: 4px 8px;")
+            } else if (upPass.value == "") {
+                SupPass.innerHTML = "Nothing Password"
+                SupPass.setAttribute("style","padding: 4px 8px;")
+            }else {
+                SupPass.innerHTML = ""
+                SupPass.setAttribute("style","padding: 0px 0px;")
+            }
         }
-
-        if (upPass.value.length > 25) {
-            SupPass.innerHTML = "number of characters Password exceeded 25"
-            SupPass.setAttribute("style","padding: 5px 10px;")
-        } else {
-            SupPass.innerHTML = ""
-            SupPass.setAttribute("style","padding: 0px 0px;")
-        }
-    } else {
+    }else {
         localStorage.setItem("user",upUser.value)
         localStorage.setItem("email",upEmail.value)
         localStorage.setItem("pass",upPass.value)
