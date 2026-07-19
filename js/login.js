@@ -242,3 +242,53 @@ signup.addEventListener("click",function(eve){
 })
 
 // end sign up js
+
+// inUser 
+// inPass 
+// SinUser 
+// SinPass 
+
+
+login.addEventListener("click",function(eve){
+    eve.preventDefault()
+
+    if (inUser.value == "" || inPass.value == "" || inUser.value.length > 20 || inPass.value.length > 25) {
+        if(inUser.value == ""){
+            SinUser.innerHTML = "Nothing Username"
+            SinUser.setAttribute("style","padding: 4px 8px;")
+        }
+
+        if(inPass.value == ""){
+            SinPass.innerHTML = "Nothing Password"
+            SinPass.setAttribute("style","padding: 4px 8px;")
+        }
+
+        if(inUser.value.length > 20){
+            SinUser.innerHTML = "number of characters Username exceeded 20"
+            SinUser.setAttribute("style","padding: 4px 8px;")
+        }
+
+        if(inPass.value.length > 25){
+            SinPass.innerHTML = "number of characters Password exceeded 25"
+            SinPass.setAttribute("style","padding: 4px 8px;")
+        }
+    } else {
+        if (inUser.value !== localStorage.getItem("user") || inPass.value !== localStorage.getItem("pass")) {
+            if(inUser.value !== localStorage.getItem("user")){
+                SinUser.innerHTML = "pleas corect username"
+                SinUser.setAttribute("style","padding: 4px 8px;")
+            }
+
+            if(inPass.value !== localStorage.getItem("pass")){
+                SinPass.innerHTML = "pleas corect password"
+                SinPass.setAttribute("style","padding: 4px 8px;")
+            }
+        } else {
+            setTimeout(function(){
+                window.location.href = "index.html"
+            },1500)
+        }
+    }
+})
+
+
