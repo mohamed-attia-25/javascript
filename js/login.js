@@ -25,7 +25,6 @@ let eyeClose2 = document.querySelector("#eyeClose2")
 let eye = false
 let input = document.querySelectorAll('[type="password"]')
 
-// placeholder="Enter Your Username"
 
 function eyemode() {
     if (eye == false) {

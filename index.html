@@ -33,12 +33,29 @@
             </button>
         </div>
 
-        <button class="login">
-            <a href="login.html">login</a>
+        <button class="login" id="log-in">
+            <a href="login.html" id="log" class="">login</a>
+            <div class="aft none" id="aftLog">
+                <span class="imgUser">
+                    <img src="" id="imgUser">
+                </span>
+                <span class="username" id="username"></span>
+                <span type="button" class="logout1" id="logout">
+                    <i class="fa-solid fa-sun " id="outt"></i>
+                </span>
+            </div>
         </button>
     </nav>
     <!-- * end navbar -->
 
+    <div class="imgOver none" id="imgOver">
+        <button type="button" id="imgOverX" style="background-color: red;">ex</button>
+        <form action="">
+            <input type="file" id="imgOverInput">
+            <button type="submit" id="imgOverBtn">add</button>
+            <button type="submit" id="imgOverBtnremove">remove</button>
+        </form>
+    </div>
 
     <!-- * hava script filse -->
     <script src="js/all.min.js"></script>

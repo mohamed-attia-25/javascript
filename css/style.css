@@ -23,6 +23,18 @@ body {
     height: 500vh;
 }
 
+.none {
+    display: none !important;
+}
+
+.opac {
+    opacity: 0;
+}
+
+.width0 {
+    width: 0;
+}
+
 /* * start style navbar */
 
 .space {
@@ -165,6 +177,7 @@ nav .login {
     right: 50px;
     background-color: transparent;
     top: 23.5px;
+    /* top: 12px; */
 }
 
 nav .login a {
@@ -186,6 +199,109 @@ nav .login a:hover {
     padding: 20px 45px;
 }
 
+.aft {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border: #3B6CF6 2px solid;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    cursor: pointer;
+}
+
+.aft:hover {
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px 10px;
+}
+
+.imgUser {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: #3B6CF6 2px solid;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.imgUser:hover {
+    box-shadow: 0 0 5px 5px rgba(0, 0, 255, 0.2);
+    transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+}
+
+.imgUser img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.username {
+    font-size: 1rem;
+    font-weight: 900;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.username:hover {
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
+    text-shadow: 0 12px 2px rgba(0, 0, 0, 0.5);
+}
+
+.logout1 {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    width: 0px;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logout10 {
+    width: 30px;
+    height: 30px;
+    border: red 2px solid;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.logout1:hover {
+    box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.2);
+    transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+}
+
 
 @media (max-width: 1350px) {
     .nav {
@@ -198,7 +314,7 @@ nav .login a:hover {
 }
 
 
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
     .nav {
         width: 750px;
     }
@@ -227,10 +343,13 @@ nav .login a:hover {
     nav .login a:hover {
         padding: 15px 20px;
     }
+    .aft a:hover {
+        padding: 15px 20px;
+    }
 
 }
 
-@media (max-width: 890px) {
+@media (max-width: 975px) {
     .nav {
         overflow: hidden;
         padding: 0px;
@@ -309,13 +428,13 @@ nav .login a:hover {
 
     nav .login {
         right: auto;
-        left: 28px;
-        top: 5px;
+        top: 5px !important;
+        left: 20px;
     }
 
     nav .login a {
         display: block;
-        width: 120px;
+        width: 135px;
         padding: 5px 0px;
         border-radius: 15px;
         -webkit-border-radius: 15px;
@@ -332,6 +451,60 @@ nav .login a:hover {
         -ms-transform: translateY(-15px);
         -o-transform: translateY(-15px);
 }
+    .aft:hover {
+        padding: 10px 5px;
+        transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -o-transform: translateY(-15px);
+}
 }
 
 /* * end style navbar */
+
+
+/* * start style img overlay */
+.imgOver {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgOver form{
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(30px);
+    width: 50%;
+    height: 40%;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #3B6CF6 2px solid;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.3);
+
+}
+
+@media (max-width: 850px) {
+    .imgOver form {
+        width: 85%;
+        height: 50%;
+    }
+}
+@media (max-width: 450px) {
+    .imgOver form {
+        width: 95%;
+        height: 60%;
+    }
+}
+/* * end style img overlay */
