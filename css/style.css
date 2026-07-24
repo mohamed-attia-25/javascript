@@ -174,14 +174,18 @@ nav .nav #togel {
 
 nav .login {
     position: absolute;
-    right: 50px;
+    right: 15px;
     background-color: transparent;
-    top: 23.5px;
-    /* top: 12px; */
+    top: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 165px;
+    height: 70px;
 }
 
 nav .login a {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color:#3b6df638;
     backdrop-filter: blur(20px);
     border: #3B6CF6 2px solid;
     padding: 12px 40px;
@@ -200,7 +204,7 @@ nav .login a:hover {
 }
 
 .aft {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color:#3b6df638;
     backdrop-filter: blur(20px);
     border: #3B6CF6 2px solid;
     padding: 5px 5px;
@@ -364,8 +368,10 @@ nav .login a:hover {
         -ms-border-radius: 35px;
         -o-border-radius: 35px;
         gap: 75px;
-        top: 60px;
+        top: 65px;
+        left: 10px;
 }
+
 
     nav .nav img {
         width: 150px;
@@ -414,7 +420,8 @@ nav .login a:hover {
         -moz-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         -o-transform: rotate(0deg);
-}
+        cursor: pointer;
+    }
 
     nav .nav #togel:hover {
         background-color: #3B6CF6;
@@ -428,8 +435,8 @@ nav .login a:hover {
 
     nav .login {
         right: auto;
-        top: 5px !important;
-        left: 20px;
+        top: 0px !important;
+        left: 0px;
     }
 
     nav .login a {
@@ -449,8 +456,8 @@ nav .login a:hover {
         -webkit-transform: translateY(-15px);
         -moz-transform: translateY(-15px);
         -ms-transform: translateY(-15px);
-        -o-transform: translateY(-15px);
-}
+        -o-transform: translateY(-15px);    
+    }
     .aft:hover {
         padding: 10px 5px;
         transform: translateY(-15px);
@@ -458,18 +465,448 @@ nav .login a:hover {
         -moz-transform: translateY(-15px);
         -ms-transform: translateY(-15px);
         -o-transform: translateY(-15px);
-}
+    }    
 }
 
 /* * end style navbar */
 
 
-/* * start style img overlay */
+/* * start style land padge */
+.landing {
+    background-image: url(../img/landing.png);
+    background-position:right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    margin-top: -35px;
+    padding: 100px 10px 10px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.textland {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 40px;
+    gap: 22px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.4);
+    animation: land 4s linear infinite alternate;
+    -webkit-animation: land 4s linear infinite alternate;
+} 
+
+.textland:hover {
+    animation-play-state: paused;
+}
+
+@keyframes land {
+    to {
+        transform: translateY(20px);
+        -webkit-transform: translateY(20px);
+        -moz-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        -o-transform: translateY(20px);
+    }
+    from {
+        transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+    }
+}
+
+.textland img {
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.textland h1 {
+    font-weight: 900;
+    font-size: 2rem;
+    color: black !important;
+}
+
+.textland p {
+    color: #707b96 !important;
+    font-size: 1.2rem;
+    width: 500px;
+    line-height: 1.2;
+}
+
+.textland a {
+    color: black !important;
+    font-size: 1.1rem;
+    font-weight: 900;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: #3B6CF6 3px solid;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.textland a:hover {
+    transform: scale(1.1,1.1) translateY(-5px);
+    -webkit-transform: scale(1.1,1.1) translateY(-5px);
+    -moz-transform: scale(1.1,1.1) translateY(-5px);
+    -ms-transform: scale(1.1,1.1) translateY(-5px);
+    -o-transform: scale(1.1,1.1) translateY(-5px);
+    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 975px) {
+    .landing {
+        background-image: url(../img/landver.png);
+        height: 70vh;
+        justify-content: center;
+    }
+
+    .textland {
+        width: 80%;
+        margin: 0;
+        margin-bottom: -50px;
+    }
+
+    .textland p {
+        width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .landing {
+        height: 75vh;
+    }
+
+    .textland {
+        width: 95%;
+        margin-bottom: -120px;
+    }
+
+    .textland h1 {
+        font-size: 1.5rem;
+    }
+
+    .textland p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .textland {
+        width: 98%;
+    }
+
+    .textland p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 335px) {
+    .textland {
+        width: 99%;
+        padding: 8px;
+    }
+
+    .textland h1 {
+        font-size: 1.3rem;
+    }
+
+    .textland img {
+        width: 250px ;
+        margin: 0;
+    }
+
+    .textland p {
+        font-size: 0.8rem;
+    }
+}
+/* * end style land padge */
+
+
+/* * start style card */
+#secCard {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 60px calc((100% - (300px * 4)) / 3);
+    padding-top: 200px;
+    margin: auto;
+    min-height: 95vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: 500px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.imgcard {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.contCard {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.textCard {
+    width: 100%;
+    height: 50%;
+    padding: 20px 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.textCard h3 {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.textCard p {
+    height: 20px;
+    overflow: hidden;
+    color: #707b96 !important;
+}
+
+.cardBtn {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.btnp {
+    position: absolute;
+    width: 80%;
+    background-color: #3B6CF6;
+    background: linear-gradient(40deg, #2656db, #90adff);
+    bottom: 20px;
+    /* bottom: 80px; */
+    left: 10%;
+    padding: 10px 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.btnp:hover {
+    transform: scale(1.1,1.1) translateY(-5px);
+    -webkit-transform: scale(1.1,1.1) translateY(-5px);
+    -moz-transform: scale(1.1,1.1) translateY(-5px);
+    -ms-transform: scale(1.1,1.1) translateY(-5px);
+    -o-transform: scale(1.1,1.1) translateY(-5px);
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2) ;
+}
+
+.btnp span {
+    position: relative;
+    font-weight: 900;
+    font-size: 1.3rem;
+} 
+
+.btnp span:nth-of-type(1) {
+    left: 10px;
+}
+
+.btnp span:nth-of-type(2) {
+    left: -25px;
+}
+
+.btnCart {
+    position: absolute;
+    width: 40%;
+    left: 10%;
+    bottom: 20px;
+    padding: 10px 0;
+    font-weight: 900;
+    font-size: 1.3rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: 5px solid black;
+    cursor: pointer;
+}
+
+.btnBuy {
+    background-color: #3B6CF6;
+    position: absolute;
+    width: 40%;
+    right: 10%;
+    bottom: 20px;
+    padding: 10px 0;
+    font-weight: 900;
+    font-size: 1.3rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 5px solid black;
+    cursor: pointer;
+}
+
+.btnCart:hover {
+    box-shadow: 3px 10px 5px 2px rgba(0, 0, 0, 0.4);
+    transform: translate(-8px,-10px);
+    -webkit-transform: translate(-8px,-10px);
+    -moz-transform: translate(-8px,-10px);
+    -ms-transform: translate(-8px,-10px);
+    -o-transform: translate(-8px,-10px);
+}
+
+.btnBuy:hover {
+    box-shadow: -3px 10px 5px 2px rgba(0, 0, 0, 0.4);
+    transform: translate(8px,-10px);
+    -webkit-transform: translate(8px,-10px);
+    -moz-transform: translate(8px,-10px);
+    -ms-transform: translate(8px,-10px);
+    -o-transform: translate(8px,-10px);
+}
+
+@media (max-width: 1480px) {
+    #secCard {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1360px) {
+    #secCard {
+        width: 90%;
+        gap: 60px calc((100% - (300px * 3)) / 2);
+    }
+}
+
+@media (max-width: 1100px) {
+    #secCard {
+        width: 95%;
+        gap: 60px calc((100% - (300px * 3)) / 2);
+    }
+}
+
+@media (max-width: 1150px) {
+    #secCard {
+        width: 95%;
+        gap: 60px calc((100% - (260px * 3)) / 2);
+    }
+
+    .card {
+        height: 450px;
+        width: 260px;
+    }
+}
+
+@media (max-width: 880px) {
+    #secCard {
+        width: 85%;
+        gap: 60px calc((100% - (300px * 2)) / 1);
+    }
+    .card {
+        height: 500px;
+        width: 300px;
+    }
+}
+
+
+@media (max-width: 750px) {
+    #secCard {
+        width: 90%;
+        gap: 60px calc((100% - (260px * 2)) / 1);
+    }
+    .card {
+        height: 450px;
+        width: 260px;
+    }
+}
+
+@media (max-width: 630px) {
+    #secCard {
+        width: 90%;
+        gap: 60px calc((100% - (350px * 1)) / 1);
+        justify-content: center;
+    }
+    .card {
+        height: 500px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 440px) {
+    #secCard {
+        width: 85%;
+    }
+    .card {
+        height: 500px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    #secCard {
+        width: 90%;
+    }
+    .card {
+        height: 500px;
+        width: 100%;
+    }
+}
+@media (max-width: 320px) {
+    #secCard {
+        width: 95%;
+    }
+    .card {
+        height: 500px;
+        width: 100%;
+    }
+}
+
+/* * end style card */
+
+
+
+/* * start style overlay imgUser */
 .imgOver {
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     top: 0;
     z-index: 2000;
     display: flex;
@@ -492,7 +929,6 @@ nav .login a:hover {
     align-items: center;
     border: #3B6CF6 2px solid;
     box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.3);
-
 }
 
 @media (max-width: 850px) {
@@ -507,4 +943,70 @@ nav .login a:hover {
         height: 60%;
     }
 }
-/* * end style img overlay */
+/* * end style overlay imgUser */
+
+
+
+
+/* * start style adminAddCard */
+#adminAdd {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    border: #0cff5d 5px solid;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 2rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+}
+
+#adminAdd:hover{
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    box-shadow: 0 10px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+#adminCard {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#adminCard form {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(30px);
+    width: 70%;
+    height: 70vh;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: #3B6CF6 5px solid;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.3);
+}
+/* * end style adminAddCard */

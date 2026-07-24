@@ -152,17 +152,21 @@ let SupUser = document.querySelector("#SupUser")
 let SupEmail = document.querySelector("#SupEmail")
 let SupPass = document.querySelector("#SupPass")
 
+let checkme = document.querySelector("#checkme")
+
+
 let em = ["com", "net", "org", "biz", "info", "eg", "gov", "edu", "dev"]
 let vel = false
 
 signup.addEventListener("click",function(eve){
     eve.preventDefault()
-                for(let i = 0; i < em.length; i++){
-                if(upEmail.value.includes(em[i])){
-                    vel = true
-                    break
-                }
-            }
+    for(let i = 0; i < em.length; i++){
+        if(upEmail.value.includes(em[i])){
+            vel = true
+            break
+        }
+    }
+
     if((upUser.value == "") || (upEmail.value == "") || (upPass.value == "") || (upUser.value.length > 20) || (upPass.value.length > 25) || !vel) {
         if (upUser.value == "") {
             SupUser.innerHTML = "Nothing Username"
@@ -246,6 +250,7 @@ signup.addEventListener("click",function(eve){
 // inPass 
 // SinUser 
 // SinPass 
+// checkme
 
 
 login.addEventListener("click",function(eve){
@@ -283,9 +288,17 @@ login.addEventListener("click",function(eve){
                 SinPass.setAttribute("style","padding: 4px 8px;")
             }
         } else {
-            setTimeout(function(){
-                window.location.href = "index.html"
-            },1500)
+            if(checkme.checked == false) {
+                sessionStorage.setItem("Susepass","logS")
+                setTimeout(function(){
+                    window.location.href = "index.html"
+                },1000)
+            }else {
+                localStorage.setItem("Lusepass","logL")
+                setTimeout(function(){
+                    window.location.href = "index.html"
+                },1000)
+            }
         }
     }
 })
