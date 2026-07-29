@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- * start navbar -->
+    <div class="space"></div>
+    <nav>
+        <div class="nav" id="navbar">
+            <img src="img/myshop_logo_site.svg" alt="logo of website"> 
+
+            <ul>
+                <li><a href="index.html" >home</a></li>
+                <li><a href="product.html" class="activ">product</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+
+            <div class="cartFav">
+                <span id="cartNav"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></span>
+                <span id="favNav"><a href="favorite.html"><i class="fa-solid fa-heart"></i></a></span>
+            </div>
+
+            <button class="mood" id="mood" type="button">
+                    <i class="fa-solid fa-sun" id="sun"></i>
+                    <i class="fa-solid fa-moon" id="moon"></i>
+                <span class="navBtn" id="navBtn"></span>
+            </button>
+
+            <button type="button" id="togel">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <button class="login" id="log-in">
+            <a href="login.html" id="log" class="">login</a>
+            <div class="aft none" id="aftLog">
+                <span class="imgUser" id="imgUser">
+                    <span id="iconUser"><i class="fa-solid fa-user" ></i></span>
+                    <img src="" id="img" class="none">
+                </span>
+                <span class="username" id="username"></span>
+                <span type="button" class="logout1" id="logout">
+                    <span id="outt">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    </span>
+                </span>
+            </div>
+        </button>
+    </nav>
+    <!-- * end navbar -->
+
+    <!-- * start ovelay imgUser -->
+    <div class="imgOver none" id="imgOver">
+        <button type="button" id="imgOverX">X</button>
+        <form action="">
+            <input type="file" id="imgOverInput">
+            <button type="submit" id="imgOverBtn">add</button>
+            <button type="submit" id="imgOverBtnremove">remove</button>
+        </form>
+    </div>
+    <!-- * end ovelay imgUser -->
+
+    <!-- * start div card -->
+    <section id="secCard">
+    <!-- <div class="card" id="card1">
+            <button class="removBtn" id="removBtn1"><i class="fa-solid fa-trash-can"></i></button>
+            <button class="favBtn" id="favBtn1"><i class="fa-solid fa-heart"></i></button>
+            <title id="cat1">acsesores</title>
+            <img src="img/backlogin.jpeg" alt="" id="imgCard1" class="imgcard">
+            <div class="contCard">
+                <div class="textCard" id="textCard1">
+                    <h3 id="title1">pollo</h3>
+                    <p id="desc1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, facere</p>
+                </div>
+                <div class="cardBtn">
+                    <button id="btnCard1" class="btnp ">
+                        <span id="pric1">30$</span>
+                        <span id="close1" class="opac">X</span>
+                    </button>
+                    <button class="btnCart opac" id="btnCart1">Cart</button>
+                    <button class="btnBuy opac" id="btnBuy1">buy</button>
+                </div>
+            </div>
+        </div> -->
+    </section> 
+    <!-- * end div card -->
+
+    <!-- * start admin addCard -->
+    <button type="button" id="adminAdd" class="none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160-160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l160 0 0 160c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160 160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-160z"/></svg>
+    </button>
+    <div id="overlayAdminAll" class="none">
+
+        <div id="adminCard" class="none">
+            <form action="">
+                <div class="btnchang">
+                    <button type="button" id="changtoproduct">Add product</button>
+                    <button type="button" id="changtocategoryBTN">Add category</button>
+                </div>
+                <div class="headeraddcard">
+                    <h2>🎁 Adding a new product</h2>
+                </div>
+                <div id="adminCat">
+                    <select id="adminCatInput">
+                    </select>
+                    <label for="adminCat">Select category</label>
+                </div>
+                <div id="adminimg">
+                    <input type="file" id="adminImgInput" accept="image/*" class="none">
+                    <label for="adminImgInput">Select a product image 📷</label>
+                    <label for="adminImgInput">Image</label>
+                </div>
+                <div class="showimage" id="showing">
+                    <span class="" id="showtext">The image was not selected</span>
+                </div>
+                <div id="adminTitle">
+                    <input type="text" id="adminTitleInput" placeholder="Example: Professional Electric Drill">
+                    <label for="adminTitleInput">Product Name</label>
+                </div>
+                <div id="adminDescrip">
+                    <textarea name="" id="adminDescripInput" placeholder="Detailed product description, specifications, and uses..."></textarea>
+                    <label for="adminDescripInput">Product Description</label>
+                </div>
+                <div id="adminPrice">
+                    <input type="number" id="adminPriceInput" placeholder="Price">
+                    <label for="adminDescripInput">Price: Egyptian pound</label>
+                </div>
+                <div class="btnsaddcard">
+                    <button type="submit" id="submitAdmin">Add product ✅</button>
+                    <button type="button" id="closeAdminCard">close ❌</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="adminCategory" class="none">
+            <form action="">
+                <div class="btnchang">
+                    <button type="button" id="changtoproductBTN">Add product</button>
+                    <button type="button" id="changtocategory">Add category</button>
+                </div>
+                <div class="headeraddcard">
+                    <h2>✨ Adding a new category</h2>
+                </div>
+                <div id="categoryName">
+                    <input type="text" placeholder="Example: Electrical tools" id="categoryNameInput">
+                    <label for="categoryNameInput">Category name</label>
+                </div>
+                <div id="categoryemojy">
+                    <input type="text" placeholder="Example: glasses = 😎" id="categoryemojyInput">
+                    <label for="categoryemojyInput">Category emojy</label>
+                </div>
+                <div id="showCategory">
+                </div>
+                <div class="btnscat">
+                    <button type="submit" id="addCat">✅ Add category</button>
+                    <button type="button" id="closeAdminCat">close</button>
+                </div>
+                <div id="oldCategory"></div>
+            </form>
+        </div>
+    </div>
+    <!-- * end admin addCard -->
+
+
+    <!-- * hava script filse -->
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mood.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

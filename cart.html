@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- * start navbar -->
+    <div class="space"></div>
+    <nav>
+        <div class="nav" id="navbar">
+            <img src="img/myshop_logo_site.svg" alt="logo of website"> 
+
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="product.html">product</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+
+            <div class="cartFav">
+                <span id="cartNav"><a href="cart.html" class="activcart"><i class="fa-solid fa-cart-shopping"></i></a></span>
+                <span id="favNav"><a href="favorite.html"><i class="fa-solid fa-heart"></i></a></span>
+            </div>
+
+            <button class="mood" id="mood" type="button">
+                    <i class="fa-solid fa-sun" id="sun"></i>
+                    <i class="fa-solid fa-moon" id="moon"></i>
+                <span class="navBtn" id="navBtn"></span>
+            </button>
+
+            <button type="button" id="togel">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <button class="login" id="log-in">
+            <a href="login.html" id="log" class="">login</a>
+            <div class="aft none" id="aftLog">
+                <span class="imgUser" id="imgUser">
+                    <span id="iconUser"><i class="fa-solid fa-user" ></i></span>
+                    <img src="" id="img" class="none">
+                </span>
+                <span class="username" id="username"></span>
+                <span type="button" class="logout1" id="logout">
+                    <span id="outt">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    </span>
+                </span>
+            </div>
+        </button>
+    </nav>
+    <!-- * end navbar -->
+
+    <!-- * start ovelay imgUser -->
+    <div class="imgOver none" id="imgOver">
+        <button type="button" id="imgOverX">X</button>
+        <form action="">
+            <input type="file" id="imgOverInput">
+            <button type="submit" id="imgOverBtn">add</button>
+            <button type="submit" id="imgOverBtnremove">remove</button>
+        </form>
+    </div>
+    <!-- * end ovelay imgUser -->
+
+    <!-- * hava script filse -->
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mood.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

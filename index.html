@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,11 +16,15 @@
 
             <ul>
                 <li><a href="index.html" class="activ">home</a></li>
-                <li><a href="#">product</a></li>
-                <li><a href="#">cart</a></li>
-                <li><a href="#">account</a></li>
+                <li><a href="product.html">product</a></li>
+                <li><a href="#">about</a></li>
                 <li><a href="#">contact</a></li>
             </ul>
+
+            <div class="cartFav">
+                <span id="cartNav"><a href="cart.html" ><i class="fa-solid fa-cart-shopping"></i></a></span>
+                <span id="favNav"><a href="favorite.html"><i class="fa-solid fa-heart"></i></a></span>
+            </div>
 
             <button class="mood" id="mood" type="button">
                     <i class="fa-solid fa-sun" id="sun"></i>
@@ -36,8 +40,9 @@
         <button class="login" id="log-in">
             <a href="login.html" id="log" class="">login</a>
             <div class="aft none" id="aftLog">
-                <span class="imgUser">
-                    <img src="" id="imgUser">
+                <span class="imgUser" id="imgUser">
+                    <span id="iconUser"><i class="fa-solid fa-user" ></i></span>
+                    <img src="" id="img" class="none">
                 </span>
                 <span class="username" id="username"></span>
                 <span type="button" class="logout1" id="logout">
@@ -52,7 +57,7 @@
 
     <!-- * start ovelay imgUser -->
     <div class="imgOver none" id="imgOver">
-        <button type="button" id="imgOverX" style="background-color: red;">X</button>
+        <button type="button" id="imgOverX">X</button>
         <form action="">
             <input type="file" id="imgOverInput">
             <button type="submit" id="imgOverBtn">add</button>
@@ -75,57 +80,40 @@
 
 
     <!-- * start div card -->
-    <!-- <section id="secCard">
-        <div class="card" id="card1">
-            <button class="none" id="removBtn1"></button>
-            <title id="cat1">acsesores</title>
-            <img src="img/backlogin.jpeg" alt="" id="imgCard1" class="imgcard">
-            <div class="contCard">
-                <div class="textCard" id="textCard1">
-                    <h3 id="title1">pollo</h3>
-                    <p id="desc1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, facere</p>
-                </div>
-                <div class="cardBtn">
-                    <button id="btnCard1" class="btnp ">
-                        <span id="pric1">30$</span>
-                        <span id="close1" class="opac">X</span>
-                    </button>
-                    <button class="btnCart opac" id="btnCart1">Cart</button>
-                    <button class="btnBuy opac" id="btnBuy1">buy</button>
-                </div>
-            </div>
-        </div>
-    </section> -->
+    <section id="secCard" class="none">
+    </section>
     <!-- * end div card -->
 
-    <!-- * start admin addCard -->
-    <button type="button" id="adminAdd" class="none">+</button>
-    <div id="adminCard" class="none">
-        <button id="closeAdminCard">X</button>
-        <form action="">
-            <div id="adminimg">
-                <input type="image" id="adminImgInput" placeholder="Image">
-                <label for="adminImgInput">image</label>
-            </div>
-            <div id="adminTitle">
-                <input type="text" id="adminTitleInput" placeholder="Title">
-                <label for="adminTitleInput">Tilte</label>
-            </div>
-            <div id="adminDescrip">
-                <input type="text" id="adminDescripInput" placeholder="Description">
-                <label for="adminDescripInput">Description</label>
-            </div>
-            <div id="adminCat">
-                <select id="adminCatInput">
-                    <option value="acss" id="cat1">acss</option>
-                </select>
-                <label for="adminCat">Category</label>
-            </div>
 
-            <button type="submit" id="submitAdmin">add card</button>
-        </form>
-    </div>
-    <!-- * end admin addCard -->
+    <!-- * start home padge sec1 appilty -->
+    <section>
+        <div class="appilty">
+            <div class="app1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.<path d="M64 96c0-35.3 28.7-64 64-64l288 0c35.3 0 64 28.7 64 64l0 32 50.7 0c17 0 33.3 6.7 45.3 18.7L621.3 192c12 12 18.7 28.3 18.7 45.3L640 384c0 35.3-28.7 64-64 64l-3.3 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64l-102.6 0c-10.4 36.9-44.4 64-84.7 64s-74.2-27.1-84.7-64l-3.3 0c-35.3 0-64-28.7-64-64l0-48-40 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l112 0c13.3 0 24-10.7 24-24s-10.7-24-24-24L24 240c-13.3 0-24-10.7-24-24s10.7-24 24-24l176 0c13.3 0 24-10.7 24-24s-10.7-24-24-24L24 144c-13.3 0-24-10.7-24-24S10.7 96 24 96l40 0zM576 288l0-50.7-45.3-45.3-50.7 0 0 96 96 0zM256 424a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm232 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+                <h4>Fast shipping</h4>
+                <p>Delivery nationwide within 2-3 business days</p>
+            </div>
+            <div class="app2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.<path d="M256 64c-56.8 0-107.9 24.7-143.1 64l47.1 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 192c-17.7 0-32-14.3-32-32L0 32C0 14.3 14.3 0 32 0S64 14.3 64 32l0 54.7C110.9 33.6 179.5 0 256 0 397.4 0 512 114.6 512 256S397.4 512 256 512c-87 0-163.9-43.4-210.1-109.7-10.1-14.5-6.6-34.4 7.9-44.6s34.4-6.6 44.6 7.9c34.8 49.8 92.4 82.3 157.6 82.3 106 0 192-86 192-192S362 64 256 64z"/></svg>
+                <h4>Free returns</h4>
+                <p>Simple and easy returns within 30 days</p>
+            </div>
+            <div class="app3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M128 96l0 64 128 0 0-64c0-35.3-28.7-64-64-64s-64 28.7-64 64zM64 160l0-64C64 25.3 121.3-32 192-32S320 25.3 320 96l0 64c35.3 0 64 28.7 64 64l0 224c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 224c0-35.3 28.7-64 64-64z"/></svg>                <h4>Secure payment</h4>
+                <p>High-level security encryption for all transactions</p>
+            </div>
+            <div class="app4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M224 64c-79 0-144.7 57.3-157.7 132.7 9.3-3 19.3-4.7 29.7-4.7l16 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-16 0c-53 0-96-43-96-96l0-64C0 100.3 100.3 0 224 0S448 100.3 448 224l0 168.1c0 66.3-53.8 120-120.1 120l-87.9-.1-32 0c-26.5 0-48-21.5-48-48s21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 0 40 0c39.8 0 72-32.2 72-72l0-20.9c-14.1 8.2-30.5 12.8-48 12.8l-16 0c-26.5 0-48-21.5-48-48l0-96c0-26.5 21.5-48 48-48l16 0c10.4 0 20.3 1.6 29.7 4.7-13-75.3-78.6-132.7-157.7-132.7z"/></svg>
+                <h4>Support 24/7</h4>
+                <p>Support team available around the clock</p>
+            </div>
+        </div>
+    </section>
+    <!-- * end home padge sec1 appilty -->
+
+    <!-- * start space betwen -->
+    <div class="spacebet"></div>
+    <!-- * end space betwen -->
 
 
     <!-- * hava script filse -->

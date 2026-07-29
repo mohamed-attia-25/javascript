@@ -101,8 +101,13 @@ body {
     gap: 5px;
 }
 
+.mebox input {
+    cursor: pointer;
+}
+
 .mebox label {
     color: #707b96 !important;
+    cursor: pointer;
 }
 
 .forgot a{
@@ -393,7 +398,7 @@ body {
     height: 100%;
     position: absolute;
     z-index: 1000;
-    background-image: url(../img/backlogin.jpeg);
+    background-image: url(../img/backlogin-ezgif.com-jpg-to-webp-converter.webp);
     background-size: cover;
     background-repeat: no-repeat;
     top: 0;
