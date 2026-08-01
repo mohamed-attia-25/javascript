@@ -110,6 +110,12 @@ if (localStorage.getItem("Lusepass") || sessionStorage.getItem("Susepass")) {
     })
 }
 
+
+
+
+
+
+
 // end after log
 
 // let adminAdd = document.querySelector("#adminAdd")

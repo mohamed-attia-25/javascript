@@ -30,7 +30,10 @@ let removeCat = document.querySelector("#removeCat")
 let addCat = document.querySelector("#addCat")
 let showCategory = document.querySelector("#showCategory")
 
+
 let productCard = []
+
+let prodFavId = []
 
 
 let count = +localStorage.getItem("countcat")
@@ -52,7 +55,7 @@ function addcat(){
         option.id = `categ${i}`;
         option.innerHTML = `${localStorage.getItem(`emoj${i}`)} ${localStorage.getItem(`cat${i}`)}`
         adminCatInput.appendChild(option);
-        showCategory.innerHTML = `
+        showCategory.innerHTML += `
             <div class="catshow" id="catshow${i}">
                 <div>
                     <span id="catEmojy${i}">${localStorage.getItem(`emoj${i}`)}</span>
@@ -102,9 +105,9 @@ function loafprod(){
     for(let i = 0; i < productCard.length; i++) {
         productCard[i].id = i
         secCard.innerHTML += `
-            <div class="card" id="card${i}">
-                <button class="removBtn none" id="removBtn${i}"><i class="fa-solid fa-trash-can"></i></button>
-                <button class="favBtn" id="favBtn${i}"><i class="fa-solid fa-heart"></i></button>
+            <div class="card" id="card${i}" tap="${0}">
+                <button class="removBtn none" id="removBtn${i}" name="${productCard[i].title}"><i class="fa-solid fa-trash-can"></i></button>
+                <button class="favBtn" id="favBtn${i}" value="${productCard[i].title}"><i class="fa-solid fa-heart"></i></button>
                 <title id="cat${i}">${productCard[i].category}</title>
                 <title id="${i}">${i}</title>
                 <img src="${productCard[i].img}" alt="" id="imgCard${i}" class="imgcard">
@@ -112,14 +115,11 @@ function loafprod(){
                     <div class="textCard" id="textCard${i}">
                         <h3 id="title${i}">${productCard[i].title}</h3>
                         <p id="desc${i}">${productCard[i].descrip}</p>
+                        <span id="pric${i}">${productCard[i].price} EGP</span>
                     </div>
                     <div class="cardBtn">
-                        <button id="btnCard${i}" class="btnp ">
-                            <span id="pric${i}">${productCard[i].price} EGP</span>
-                            <span id="close${i}" class="opac">X</span>
-                        </button>
-                        <button class="btnCart opac" id="btnCart${i}">Cart</button>
-                        <button class="btnBuy opac" id="btnBuy${i}">buy</button>
+                        <button class="btnCart" id="btnCart${i}" addtocart="${productCard[i].title}">add to Cart</button>
+                        <button class="btnBuy" id="btnBuy${i}">Buy now</button>
                     </div>
                 </div>
             </div>
@@ -127,7 +127,6 @@ function loafprod(){
     }
 }
 loafprod()
-
 
 for (let i = 0; i < productCard.length; i++ ){
     let removBtn = document.querySelector(`#removBtn${i}`)
@@ -142,6 +141,11 @@ for (let i = 0; i < productCard.length; i++ ){
         }
         productCard = productCard.filter(item => item.id != ID)
         localStorage.setItem("prodact",JSON.stringify(productCard)) 
+        let newar = prodFavId.filter(function(ele){
+            return removBtn.name !== ele
+        })
+        prodFavId = newar
+        localStorage.favid = prodFavId
         loafprod()
         window.location.reload()
     })
@@ -175,37 +179,17 @@ submitAdmin.addEventListener("click",function(eve){
     window.location.reload()
 })
 
+function logadmin(){
+    localStorage.removeItem("admin")
+    if (getemail == "admin@add.com" && getuser == "admin" && getpass == "Admin2020@") {
+        if (localStorage.getItem("Lusepass") || sessionStorage.getItem("Susepass")){
+            localStorage.setItem("admin","true")
+        }
+    }
+}
+logadmin()
 
-// let adminAdd = document.querySelector("#adminAdd")
-
-// let overlayAdminAll = document.querySelector("#overlayAdminAll")
-
-// let secCard = document.querySelector("#secCard")
-
-
-// let AddCard = document.querySelector("#AddCard")
-// let AddCat = document.querySelector("#AddCat")
-// let changtoproductBTN = document.querySelector("#changtoproductBTN")
-// let changtocategoryBTN = document.querySelector("#changtocategoryBTN")
-
-// let adminCard = document.querySelector("#adminCard")
-// let closeAdminCard = document.querySelector("#closeAdminCard")
-// let adminImgInput = document.querySelector("#adminImgInput")
-// let adminTitleInput = document.querySelector("#adminTitleInput")
-// let adminDescripInput = document.querySelector("#adminDescripInput")
-// let adminPriceInput = document.querySelector("#adminPriceInput")
-// let adminCatInput = document.querySelector("#adminCatInput")
-// let submitAdmin = document.querySelector("#submitAdmin")
-
-// let adminCategory = document.querySelector("#adminCategory")
-// let closeAdminCat = document.querySelector("#closeAdminCat")
-// let categoryNameInput = document.querySelector("#categoryNameInput")
-// let removeCat = document.querySelector("#removeCat")
-// let addCat = document.querySelector("#addCat")
-
-
-
-if (getemail == "admin@add.com" && getuser == "admin" && getpass == "Admin2020@") {
+if (localStorage.getItem("admin") == "true") {
     adminAdd.classList.remove("none")
 
     let removeBTN = document.querySelectorAll(".removBtn")
@@ -245,4 +229,74 @@ if (getemail == "admin@add.com" && getuser == "admin" && getpass == "Admin2020@"
     })
 
 }
+
+//////
+// localStorage.removeItem("favid")
+
+
+if(!localStorage.getItem("favid")){
+    localStorage.setItem("favid",JSON.stringify(prodFavId))
+}else {
+    prodFavId = JSON.parse(localStorage.getItem("favid"))
+}
+
+function activfav(){
+    for(let i = 0; i < prodFavId.length; i++){
+        let favBtn = document.querySelector(`[value="${prodFavId[i]}"]`)
+        favBtn.classList.add("activred")
+    }
+}
+activfav()
+
+function arrfavid(id){
+    prodFavId = JSON.parse(localStorage.getItem("favid"))
+    let trueec = 0
+    for (let i = 0; i < prodFavId.length; i++){
+        if(id == prodFavId[i]){
+            trueec += 1
+        }
+    }
+    if(prodFavId.length == 0 || trueec == 0){
+        if (prodFavId.length == 0) {
+            prodFavId.push(id)
+            let favBtn = document.querySelector(`[value="${id}"]`)
+            favBtn.classList.add("activred") 
+        } else {
+            let trueor = 0
+            for (let i = 0; i < prodFavId.length; i++){
+                if(id == prodFavId[i]){
+                    trueor += 1
+                }
+            }
+            if (trueor == 0) {
+                prodFavId.push(id)
+                let favBtn = document.querySelector(`[value="${id}"]`)
+                favBtn.classList.add("activred") 
+            }
+        }
+    } else {
+        let after = prodFavId.filter(function(ele){
+            return ele !== id
+        })
+        prodFavId = after
+        let favBtn = document.querySelector(`[value="${id}"]`)
+        favBtn.classList.remove("activred") 
+    }
+    localStorage.favid = JSON.stringify(prodFavId)
+    // activfav()
+}
+
+
+
+
+
+
+for (let i = 0; i < productCard.length; i++) {
+    let addfavbtn = document.querySelector(`#favBtn${i}`)
+    addfavbtn.addEventListener("click",function(){
+        console.log(addfavbtn.value)
+        arrfavid(addfavbtn.value)
+    })
+}
+
 
